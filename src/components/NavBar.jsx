@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <header className="flex justify-between items-center p-4 bg-[var(--primaryColor)] w-[80vw] min-h-10 rounded-full mx-auto mt-8 text-white">
@@ -10,16 +12,20 @@ function NavBar() {
 
       <nav>
         <ul className="flex items-center gap-x-6 font-semibold">
-          <li className="text-[var(--secondryColor)] underline underline-[var(--secondryColor)] ">HOME</li>
-          <li>Services</li>
-          <li>About</li>
+          <li className="text-[var(--secondryColor)] underline underline-[var(--secondryColor)] ">
+            <Link to="/">HOME</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+         <Link to="/about"> <li>About</li></Link>
           <li>Project</li>
           <li>Blogs</li>
           <li>Testimonials</li>
         </ul>
       </nav>
       <button className="py-3 px-6 rounded-full bg-white text-[var(--primaryColor)]">
-        Contact me
+        <Link to="/contact">Contact me</Link>
       </button>
     </header>
   );
