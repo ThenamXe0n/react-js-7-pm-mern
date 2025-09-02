@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import NotFoundPage from "./page/NotFoundPage";
 import LoginPage from "./page/LoginPage";
 import Counter from "./components/Counter";
+import ConditionalStates from "./components/ConditionalStates";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             </>
           }
         />
+        <Route path="/condition-states" element=<ConditionalStates /> />
       </Routes>
     </>
   );

@@ -1,0 +1,1 @@
+const tabItems = ["html","css","javascript","react js"]
