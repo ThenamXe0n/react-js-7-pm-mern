@@ -8,6 +8,8 @@ import NotFoundPage from "./page/NotFoundPage";
 import LoginPage from "./page/LoginPage";
 import Counter from "./components/Counter";
 import ConditionalStates from "./components/ConditionalStates";
+import HooksUseEffect from "./components/hooks/HooksUseEffect";
+import UseRefHook from "./components/hooks/UseRefHook";
 
 function App() {
   return (
@@ -41,6 +43,8 @@ function App() {
           }
         />
         <Route path="/condition-states" element=<ConditionalStates /> />
+        <Route path="/useEffect" element={<HooksUseEffect />} />
+        <Route path="/useRef-practice" element={<UseRefHook/>} />
       </Routes>
     </>
   );
