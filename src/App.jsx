@@ -11,6 +11,7 @@ import ConditionalStates from "./components/ConditionalStates";
 import HooksUseEffect from "./components/hooks/HooksUseEffect";
 import UseRefHook from "./components/hooks/UseRefHook";
 import ConditionStyling from "./components/conditionalRendering/ConditionalStyling";
+import ShopSection from "./components/apiHandeling/ShopSection";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/useEffect" element={<HooksUseEffect />} />
         <Route path="/useRef-practice" element={<UseRefHook/>} />
         <Route path="/conditional-styling" element={<ConditionStyling/>}/>
+        <Route path="/shop" element={<ShopSection/>} />
       </Routes>
     </>
   );

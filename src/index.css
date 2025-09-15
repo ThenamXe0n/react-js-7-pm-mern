@@ -2,5 +2,8 @@
 :root {
   --primaryColor: #344c36;
   --secondryColor: #faad1b;
+} 
+.numberStroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
-/* 
