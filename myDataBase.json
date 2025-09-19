@@ -1,0 +1,52 @@
+{
+  "movies": [
+    {
+      "name": "inspector zende",
+      "videoUrl": "https://www.youtube.com/embed/SqIE6lj2IGo?si=inJqRlOPcPRe7zVU",
+      "casts": [
+        "aamir khan",
+        "kareena kapoor"
+      ],
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmM5M2IwYmYtZDNkMy00OWU0LTgyMTgtZDM4ZTcyMmE0YTk1XkEyXkFqcGc@._V1_QL75_UY281_CR18,0,500,281_.jpg",
+      "id": "444f"
+    },
+    {
+      "id": "fa9b",
+      "name": "welcome",
+      "videoUrl": "https://www.youtube.com/embed/SIKfSPbsuyw?si=_G3wS7fZVF1JL-rM",
+      "casts": [],
+      "posterUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTAuBc-VOTkWiC3UDfQy0qQquYyQ-QiVSzAUpPYX4hJaQ0tA0wz"
+    },
+    {
+      "id": "22bb",
+      "name": "The magic flute",
+      "videoUrl": "https://www.youtube.com/embed/sJh8g8t_XSU?si=3ngM42mICHOVRhLj",
+      "casts": [],
+      "posterUrl": "https://hips.hearstapps.com/hmg-prod/images/best-teen-movies-2023-magic-flute-640755619b5a5.jpg"
+    },
+    {
+      "id": "d351",
+      "name": "Badss of bollywoods",
+      "videoUrl": "https://www.youtube.com/embed/XYfWctpG6CE?si=sHNZcIaNRZvCYmIU",
+      "casts": [],
+      "posterUrl": "https://occ-0-4875-2164.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTL7Fj7heeFoX7irwK5SlYgKq0ygZ0n1SXDq0CDSHEcCHwVlQSrEeeDl3OD65-TVMhMkkKpGMYt7iJT3fdJOswaRDAgSOzojdI_47L67N8Wj-4yeoCw6c1W0GQ4GvqtTarIte6RSEQVRvsSkS2yK92nBIn2Ps8glTJsbDw_vygbfQUo8VnaeFccCBjzfB3box8NX91xjEvbvMPTNZ1evespGIb7bes5kqwCfndNOzVWBSUAknS8Tr8vwl_m1FAkWP5s.jpg?r=b01"
+    }
+  ],
+  "user": [
+    {
+      "name": "mansi",
+      "isActive": true,
+      "emai": "mansi@gmail.com",
+      "password": "mansi123",
+      "id": "d577"
+    },
+    {
+      "name": "tohid",
+      "isActive": true,
+      "emai": "tohid@gmail.com",
+      "password": "tohid123",
+      "id": "3e5e"
+    }
+  ],
+  "admin": []
+}

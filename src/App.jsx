@@ -12,6 +12,9 @@ import HooksUseEffect from "./components/hooks/HooksUseEffect";
 import UseRefHook from "./components/hooks/UseRefHook";
 import ConditionStyling from "./components/conditionalRendering/ConditionalStyling";
 import ShopSection from "./components/apiHandeling/ShopSection";
+import MoviesPage from "./page/MoviesPage";
+import AddMovieForm from "./components/forms/AddMovieForm";
+import MovieDisplayPage from "./page/MovieDisplayPage";
 
 function App() {
   return (
@@ -49,6 +52,9 @@ function App() {
         <Route path="/useRef-practice" element={<UseRefHook/>} />
         <Route path="/conditional-styling" element={<ConditionStyling/>}/>
         <Route path="/shop" element={<ShopSection/>} />
+        <Route path="/movies" element={<MoviesPage/>} />
+        <Route path="/add-movies" element={<AddMovieForm/>} />
+        <Route path="/movie-display/:id" element={<MovieDisplayPage/>} />
       </Routes>
     </>
   );
