@@ -15,6 +15,7 @@ import ShopSection from "./components/apiHandeling/ShopSection";
 import MoviesPage from "./page/MoviesPage";
 import AddMovieForm from "./components/forms/AddMovieForm";
 import MovieDisplayPage from "./page/MovieDisplayPage";
+import ManageMoviesPage from "./page/admin/ManageMoviesPage";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
         <Route path="/movies" element={<MoviesPage/>} />
         <Route path="/add-movies" element={<AddMovieForm/>} />
         <Route path="/movie-display/:id" element={<MovieDisplayPage/>} />
+        <Route path="/dashboard/manage-movies" element={<ManageMoviesPage/>} />
       </Routes>
     </>
   );

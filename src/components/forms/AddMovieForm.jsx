@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const AddMovieForm = () => {
+  const navigate = useNavigate();
   const [movieDetails, setMovieDetails] = useState({
     name: "",
     videoUrl: "",
@@ -19,8 +22,13 @@ const AddMovieForm = () => {
 
   async function handleAddMovie(e) {
     e.preventDefault();
-    let movieAdded = await axios.post("http://localhost:8080/movies", movieDetails);
+    let movieAdded = await axios.post(
+      "http://localhost:8080/movies",
+      movieDetails
+    );
     console.log("movie added : ", movieAdded.data);
+    toast.success("movie added successfully");
+    navigate("/movies");
   }
   console.log("movieDetails ", movieDetails);
   return (

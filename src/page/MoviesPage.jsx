@@ -3,6 +3,7 @@ import TrendingCard from "../components/TrendingCard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PiPlusCircle } from "react-icons/pi";
+import toast from "react-hot-toast";
 
 const MoviesPage = () => {
   const [movieList, setMovieList] = useState([]);
@@ -10,10 +11,10 @@ const MoviesPage = () => {
   async function getMoviesApi() {
     try {
       let response = await axios.get("http://localhost:8080/movies");
-      console.log(response.data);
       setMovieList(response.data);
+      toast.success("data loaded successfully");
     } catch (error) {
-      console.alert(error.message);
+      toast.error(error.message);
     }
   }
 
