@@ -1,28 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ManageMovieCard from "../../components/ManageMovieCard";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { BiTrash } from "react-icons/bi";
+import { storeContext } from "../../contextApi/myStateContext";
 
 const ManageMoviesPage = () => {
-  const [movieList, setMovieList] = useState([]);
-  const [formOpenStatus, setFormOpenStatus] = useState(false);
+  const { movieList, setMovieList, formOpenStatus, setFormOpenStatus } =
+    useContext(storeContext);
+
   const [selectedMovie, setSelectedMovie] = useState({
     name: "3idiots",
     videoUrl: "htto://kjhsjhfj.com",
   });
   const [movieDetails, setMovieDetails] = useState({});
   console.log("movie details", movieDetails);
-
-  async function getMoviesApi() {
-    try {
-      let response = await axios.get("http://localhost:8080/movies");
-      setMovieList(response.data);
-      toast.success("data loaded successfully");
-    } catch (error) {
-      toast.error(error.message);
-    }
-  }
 
   function handleChangeValues(e) {
     setMovieDetails((prev) => {
@@ -57,13 +49,13 @@ const ManageMoviesPage = () => {
     }
   }
 
-  useEffect(() => {
-    getMoviesApi();
-    //clearup function
-    return () => {
-      getMoviesApi();
-    };
-  }, []);
+  // useEffect(() => {
+  //   getMoviesApi();
+  //   //clearup function
+  //   return () => {
+  //     getMoviesApi();
+  //   };
+  // }, []);
 
   return (
     <section className="w-screen min-h-screen bg-blue-300">

@@ -16,6 +16,8 @@ import MoviesPage from "./page/MoviesPage";
 import AddMovieForm from "./components/forms/AddMovieForm";
 import MovieDisplayPage from "./page/MovieDisplayPage";
 import ManageMoviesPage from "./page/admin/ManageMoviesPage";
+import PropDrillingExample from "./components/PropDrillingExample";
+import ImageSlider from "./components/sliders/ImageSlider";
 
 function App() {
   return (
@@ -50,13 +52,22 @@ function App() {
         />
         <Route path="/condition-states" element=<ConditionalStates /> />
         <Route path="/useEffect" element={<HooksUseEffect />} />
-        <Route path="/useRef-practice" element={<UseRefHook/>} />
-        <Route path="/conditional-styling" element={<ConditionStyling/>}/>
-        <Route path="/shop" element={<ShopSection/>} />
-        <Route path="/movies" element={<MoviesPage/>} />
-        <Route path="/add-movies" element={<AddMovieForm/>} />
-        <Route path="/movie-display/:id" element={<MovieDisplayPage/>} />
-        <Route path="/dashboard/manage-movies" element={<ManageMoviesPage/>} />
+        <Route path="/useRef-practice" element={<UseRefHook />} />
+        <Route path="/conditional-styling" element={<ConditionStyling />} />
+        <Route path="/shop" element={<ShopSection />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/add-movies" element={<AddMovieForm />} />
+        <Route path="/movie-display/:id" element={<MovieDisplayPage />} />
+        <Route
+          path="/dashboard/manage-movies"
+          element={
+            <Layout>
+              <ManageMoviesPage />
+            </Layout>
+          }
+        />
+        <Route path="/propdrilling-example" element={<PropDrillingExample />} />
+        <Route path="/slider" element={<ImageSlider />} />
       </Routes>
     </>
   );

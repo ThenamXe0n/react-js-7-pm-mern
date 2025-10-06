@@ -8,6 +8,7 @@ import { Link, RouterProvider, BrowserRouter } from "react-router-dom";
 import ContactPage from "./page/ContactPage.jsx";
 import Layout from "./components/Layout.jsx";
 import { Toaster } from "react-hot-toast";
+import { MyStoreProvider } from "./contextApi/myStateContext.jsx";
 
 // const myRouter = createBrowserRouter([
 //   {
@@ -54,14 +55,16 @@ import { Toaster } from "react-hot-toast";
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   <BrowserRouter>
-    <App />
-    <Toaster
-      toastOptions={{
-        style: { background: "black", color: "white" },
-      }}
-      removeDelay={500}
-      position="bottom-center"
-    />
+    <MyStoreProvider>
+      <App />
+      <Toaster
+        toastOptions={{
+          style: { background: "black", color: "white" },
+        }}
+        removeDelay={500}
+        position="bottom-center"
+      />
+    </MyStoreProvider>
   </BrowserRouter>
   // </StrictMode>
 );

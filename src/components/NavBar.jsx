@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { storeContext } from "../contextApi/myStateContext";
+import { useContext } from "react";
 
 function NavBar() {
+  const { movieList } = useContext(storeContext);
   return (
     <header className="flex justify-between items-center p-4 bg-[var(--primaryColor)] w-[80vw] min-h-10 rounded-full mx-auto mt-8 text-white">
       <div className="flex items-center gap-x-2">
@@ -18,10 +21,18 @@ function NavBar() {
           <li>
             <Link to="/services">Services</Link>
           </li>
-         <Link to="/about"> <li>About</li></Link>
+          <Link to="/about">
+            {" "}
+            <li>About</li>
+          </Link>
           <li>Project</li>
           <li>Blogs</li>
-          <li>Testimonials</li>
+          <li className="relative">
+            movies{" "}
+            <div className="size-8 absolute -top-5 -right-5 bg-black text-white rounded-full p-3 flex items-center justify-center">
+              {movieList.length}
+            </div>
+          </li>
         </ul>
       </nav>
       <button className="py-3 px-6 rounded-full bg-white text-[var(--primaryColor)]">
